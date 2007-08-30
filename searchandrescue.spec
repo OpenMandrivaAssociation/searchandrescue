@@ -78,7 +78,7 @@ Icon=%{name}
 Terminal=false
 Type=Application
 StartupNotify=false
-Categories=Game/Simulation
+Categories=Game/Simulation;
 EOF
 
 %clean
