@@ -18,7 +18,7 @@ Patch0:         %{name}-0.8.2.gcc4.patch
 Requires:       %{name}-data
 Buildrequires:  libjsw-devel
 Buildrequires:  libyiff-devel
-Buildrequires:  XFree86-devel
+Buildrequires:  X11-devel
 Buildrequires:  Mesa-common-devel
 Buildrequires:  ImageMagick
 BuildRoot:      %{_tmppath}/%{name}-%{version}
