@@ -21,6 +21,7 @@ Buildrequires:  libyiff-devel
 Buildrequires:  X11-devel
 Buildrequires:  Mesa-common-devel
 Buildrequires:  ImageMagick
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 Changing the pace of recent sterotypical game themes, Search and Rescue aims to 
