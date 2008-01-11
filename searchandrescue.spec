@@ -56,17 +56,6 @@ install -D -m 644 %{name}-32.png %{buildroot}%{_iconsdir}/%{name}.png
 install -D -m 644 %{name}-48.png %{buildroot}%{_liconsdir}/%{name}.png 
 
 # menu entry
-mkdir -p %{buildroot}%{_menudir}
-cat >%{buildroot}%{_menudir}/%{name} <<EOF
-?package(%{name}): \
-    command="%{_gamesbindir}/%{Name}" \
-    needs="X11" \
-    icon="%{name}.png" \
-    section="More Applications/Games/Other" \
-    title="%{title}" \
-    longtitle="%{longtitle}" \
-    xdg="true"
-EOF
 
 install -d -m 755 %{buildroot}%{_datadir}/applications
 cat >  %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -95,7 +84,6 @@ rm -rf %{buildroot}
 %doc AUTHORS  HACKING  INSTALL  LICENSE  README
 %{_gamesbindir}/*
 %{_mandir}/man6/*
-%{_menudir}/%{name}
 %{_datadir}/applications/mandriva-%{name}.desktop
 %{_iconsdir}/%{Name}*.xpm
 %{_miconsdir}/%{name}.png
