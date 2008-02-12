@@ -24,10 +24,10 @@ Buildrequires:  ImageMagick
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
-Changing the pace of recent sterotypical game themes, Search and Rescue aims to 
+Changing the pace of recent sterotypical game themes, Search and Rescue aims to
 create a plot based on positive goals such as saving victims in varying 
 situations of distress.
-The player will be given the chance to pilot different types of rescue aircraft 
+The player will be given the chance to pilot different types of rescue aircraft
 in a variety of search and rescue style missions.
 Search and Rescue is highly customizeable by allowing intermediate players to 
 create their own missions and allowing experianced players to design their own 
