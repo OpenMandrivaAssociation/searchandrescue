@@ -20,7 +20,7 @@ Buildrequires:  libjsw-devel
 Buildrequires:  libyiff-devel
 Buildrequires:  X11-devel
 Buildrequires:  Mesa-common-devel
-Buildrequires:  ImageMagick
+Buildrequires:  imagemagick
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
