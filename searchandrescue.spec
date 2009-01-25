@@ -87,7 +87,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS  HACKING  INSTALL  LICENSE  README
+%doc AUTHORS  HACKING  INSTALL  README
 %{_gamesbindir}/*
 %{_mandir}/man6/*
 %{_datadir}/applications/mandriva-%{name}.desktop
