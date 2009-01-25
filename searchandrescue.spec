@@ -1,7 +1,7 @@
 %define name    searchandrescue
 %define Name    SearchAndRescue
 %define version 0.8.2
-%define release %mkrel 7
+%define release %mkrel 6
 
 %define title       SearchAndRescue
 %define longtitle   Helicopter simulator
@@ -15,6 +15,7 @@ Group:          Games/Other
 Url:            http://wolfpack.twu.net/SearchAndRescue/index.html
 Source0:        http://wolfpack.twu.net/users/wolfpack/%{Name}-%{version}.tar.bz2
 Patch0:         %{name}-0.8.2.gcc4.patch
+Patch1:		SearchAndRescue-0.8.2-exception-throw.patch
 Requires:       %{name}-data
 Buildrequires:  libjsw-devel
 Buildrequires:  libyiff-devel
@@ -36,6 +37,7 @@ aircraft and scenery.
 %prep
 %setup -q -n %{Name}-%{version}
 %patch0 -p1
+%patch1 -p1 -b .throw
 
 %build
 export CFLAGS="%{optflags}"
@@ -93,5 +95,3 @@ rm -rf %{buildroot}
 %{_miconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
-
-
