@@ -1,7 +1,7 @@
 %define name    searchandrescue
 %define Name    SearchAndRescue
 %define version 0.8.2
-%define release %mkrel 6
+%define release %mkrel 7
 
 %define title       SearchAndRescue
 %define longtitle   Helicopter simulator
