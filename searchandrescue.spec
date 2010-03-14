@@ -1,7 +1,7 @@
 %define name    searchandrescue
 %define Name    SearchAndRescue
-%define version 0.8.2
-%define release %mkrel 7
+%define version 0.8.3
+%define release %mkrel 1
 
 %define title       SearchAndRescue
 %define longtitle   Helicopter simulator
@@ -12,10 +12,8 @@ Release:        %{release}
 Summary:        Helicopter simulator
 License:        GPL
 Group:          Games/Other
-Url:            http://wolfpack.twu.net/SearchAndRescue/index.html
-Source0:        http://wolfpack.twu.net/users/wolfpack/%{Name}-%{version}.tar.bz2
-Patch0:         %{name}-0.8.2.gcc4.patch
-Patch1:		SearchAndRescue-0.8.2-exception-throw.patch
+Url:            http://searchandrescue.sourceforge.net/
+Source0:        http://sourceforge.net/projects/searchandrescue/files/Program/%{Name}-%{version}.tar.gz
 Requires:       %{name}-data
 Buildrequires:  libjsw-devel
 Buildrequires:  libyiff-devel
@@ -35,9 +33,7 @@ create their own missions and allowing experianced players to design their own
 aircraft and scenery.  
 
 %prep
-%setup -q -n %{Name}-%{version}
-%patch0 -p1
-%patch1 -p1 -b .throw
+%setup -q -n %{name}_%{version}
 
 %build
 export CFLAGS="%{optflags}"
@@ -56,6 +52,11 @@ convert sar/icons/%{Name}.xpm %{name}-48.png
 install -D -m 644 %{name}-16.png %{buildroot}%{_miconsdir}/%{name}.png
 install -D -m 644 %{name}-32.png %{buildroot}%{_iconsdir}/%{name}.png 
 install -D -m 644 %{name}-48.png %{buildroot}%{_liconsdir}/%{name}.png 
+
+install -d -m 755 %{buildroot}%{_datadir}/pixmaps
+mv %{buildroot}%{_prefix}/X11R6/include/X11/pixmaps/*.xpm \
+    %{buildroot}%{_datadir}/pixmaps
+rm -rf %{buildroot}%{_prefix}/X11R6
 
 # menu entry
 
@@ -91,7 +92,7 @@ rm -rf %{buildroot}
 %{_gamesbindir}/*
 %{_mandir}/man6/*
 %{_datadir}/applications/mandriva-%{name}.desktop
-%{_iconsdir}/%{Name}*.xpm
+%{_datadir}/pixmaps/*.xpm
 %{_miconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
