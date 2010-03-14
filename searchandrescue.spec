@@ -15,8 +15,8 @@ Group:          Games/Other
 Url:            http://searchandrescue.sourceforge.net/
 Source0:        http://sourceforge.net/projects/searchandrescue/files/Program/%{Name}-%{version}.tar.gz
 Requires:       %{name}-data
-Buildrequires:  libjsw-devel
-Buildrequires:  libyiff-devel
+Buildrequires:  jsw-devel
+Buildrequires:  yiff-devel
 Buildrequires:  X11-devel
 Buildrequires:  Mesa-common-devel
 Buildrequires:  imagemagick
