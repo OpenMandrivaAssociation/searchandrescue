@@ -1,6 +1,6 @@
 %define name    searchandrescue
 %define Name    SearchAndRescue
-%define version 1.0.0
+%define version 1.1.0
 %define release %mkrel 1
 
 %define title       SearchAndRescue
@@ -54,9 +54,6 @@ install -D -m 644 %{name}-32.png %{buildroot}%{_iconsdir}/%{name}.png
 install -D -m 644 %{name}-48.png %{buildroot}%{_liconsdir}/%{name}.png 
 
 install -d -m 755 %{buildroot}%{_datadir}/pixmaps
-mv %{buildroot}%{_prefix}/X11R6/include/X11/pixmaps/*.xpm \
-    %{buildroot}%{_datadir}/pixmaps
-rm -rf %{buildroot}%{_prefix}/X11R6
 
 # menu entry
 
@@ -91,8 +88,8 @@ rm -rf %{buildroot}
 %doc AUTHORS  HACKING  INSTALL  README
 %{_gamesbindir}/*
 %{_mandir}/man6/*
-%{_datadir}/applications/mandriva-%{name}.desktop
 %{_datadir}/pixmaps/*.xpm
+%{_datadir}/applications/mandriva-%{name}.desktop
 %{_miconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
