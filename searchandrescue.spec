@@ -19,6 +19,7 @@ Buildrequires:  jsw-devel
 Buildrequires:  yiff-devel
 Buildrequires:  X11-devel
 Buildrequires:  SDL-devel
+Buildrequires:  SDL_mixer-devel
 Buildrequires:  Mesa-common-devel
 Buildrequires:  imagemagick
 BuildRoot:      %{_tmppath}/%{name}-%{version}
