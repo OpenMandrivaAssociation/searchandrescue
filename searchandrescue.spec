@@ -18,6 +18,7 @@ Requires:       %{name}-data
 Buildrequires:  jsw-devel
 Buildrequires:  yiff-devel
 Buildrequires:  X11-devel
+Buildrequires:  SDL-devel
 Buildrequires:  Mesa-common-devel
 Buildrequires:  imagemagick
 BuildRoot:      %{_tmppath}/%{name}-%{version}
