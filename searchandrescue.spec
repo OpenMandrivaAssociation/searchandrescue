@@ -1,7 +1,7 @@
 %define name    searchandrescue
 %define Name    SearchAndRescue
 %define version 1.1.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define title       SearchAndRescue
 %define longtitle   Helicopter simulator
@@ -14,13 +14,17 @@ License:        GPL
 Group:          Games/Other
 Url:            http://searchandrescue.sourceforge.net/
 Source0:        http://sourceforge.net/projects/searchandrescue/files/Program/%{Name}-%{version}.tar.gz
+Patch0:		SearchAndRescue-1.1.0-link.patch
 Requires:       %{name}-data
 Buildrequires:  jsw-devel
 Buildrequires:  yiff-devel
-Buildrequires:  X11-devel
 Buildrequires:  SDL-devel
-Buildrequires:  SDL_mixer-devel
-Buildrequires:  Mesa-common-devel
+BuildRequires:	libx11-devel
+BuildRequires:	libxext-devel
+BuildRequires:	libxpm-devel
+BuildRequires:	mesagl-devel
+BuildRequires:	mesaglu-devel
+BuildRequires:	libxxf86vm-devel
 Buildrequires:  imagemagick
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
@@ -36,12 +40,14 @@ aircraft and scenery.
 
 %prep
 %setup -q -n %{name}_%{version}
+%patch0 -p0 -b .link
 
 %build
 export CFLAGS="%{optflags}"
-export LD_LIBRARY_PATH=%{_libdir}:%{_prefix}/X11R6/%{_lib}
-./configure Linux -v --disable=arch-i686 --libdir="-L%{_libdir} -L%{_prefix}/X11R6/%{_lib}"
-%make all
+export LD_LIBRARY_PATH=%{_libdir}
+export CPP="g++ %ldflags "
+./configure Linux -v --disable=arch-i686 --libdir="-L%{_libdir}"
+make all
 
 %install
 rm -rf %{buildroot}
@@ -69,7 +75,7 @@ Icon=%{name}
 Terminal=false
 Type=Application
 StartupNotify=false
-Categories=Game/Simulation;
+Categories=Game;Simulation;
 EOF
 
 %clean
