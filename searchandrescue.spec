@@ -1,6 +1,6 @@
 %define name    searchandrescue
 %define Name    SearchAndRescue
-%define version 1.2.0
+%define version 1.3.0
 %define release %mkrel 1
 
 %define title       SearchAndRescue
@@ -14,11 +14,10 @@ License:        GPL
 Group:          Games/Other
 Url:            http://searchandrescue.sourceforge.net/
 Source0:        http://sourceforge.net/projects/searchandrescue/files/Program/%{Name}-%{version}.tar.gz
-Patch0:		SearchAndRescue-1.1.0-link.patch
 Requires:       %{name}-data
 Buildrequires:  jsw-devel
-Buildrequires:  yiff-devel
 Buildrequires:  SDL-devel
+BuildRequires:	libSDL_mixer-devel
 BuildRequires:	libx11-devel
 BuildRequires:	libxext-devel
 BuildRequires:	libxpm-devel
@@ -40,13 +39,12 @@ aircraft and scenery.
 
 %prep
 %setup -q -n %{name}_%{version}
-%patch0 -p0 -b .link
 
 %build
-export CFLAGS="%{optflags}"
+export CFLAGS="%{optflags} -D__USE_BSD -DHAVE_SDL_MIXER -Wno-write-strings -DNEW_GRAPHICS"
 export LD_LIBRARY_PATH=%{_libdir}
 export CPP="g++ %ldflags "
-./configure Linux -v --disable=arch-i686 --libdir="-L%{_libdir}"
+./configure Linux -v --libdir="-L%{_libdir}" --disable=Y2
 make all
 
 %install
