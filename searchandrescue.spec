@@ -21,6 +21,9 @@ BuildRequires:	mesagl-devel
 BuildRequires:	mesaglu-devel
 BuildRequires:	libxxf86vm-devel
 BuildRequires:	libxxf86vm-static-devel
+BuildRequires:	libsm-devel
+BuildRequires:	libice-devel
+BuildRequires:	libxmu-devel
 Buildrequires:	imagemagick
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
