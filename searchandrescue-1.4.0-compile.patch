@@ -1,0 +1,10 @@
+--- searchandrescue_1.4.0/sar/sarmenuoptions.c.bero	2012-12-04 22:11:08.449948289 +0100
++++ searchandrescue_1.4.0/sar/sarmenuoptions.c	2012-12-04 22:11:20.093041376 +0100
+@@ -19,6 +19,7 @@
+ #include <stdlib.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <Y2/Ylib.h>
+ #ifdef __MSW__
+ # include <windows.h>
+ #else

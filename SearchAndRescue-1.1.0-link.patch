@@ -1,0 +1,47 @@
+--- sar/platforms.ini.link	2010-09-06 23:59:43.000000000 +0200
++++ sar/platforms.ini	2011-02-10 17:01:06.000000000 +0100
+@@ -65,7 +65,7 @@
+                 Description = X Window Systems
+                 MustExist = Yes
+                 FeatureCFLAGS = -DUSE_XSHM -DHAVE_MWMUTIL_H
+-                FeatureLIBS = -lSM -lICE -lX11 -lXext -lXmu
++                FeatureLIBS = -lX11 -lXext
+                 FeatureLIB_DIR = -L/usr/X11R6/lib/
+                 FeatureDepend = X11-lib
+                         DependType = Library  
+@@ -102,7 +102,7 @@
+                 FeatureDepend = xf86vidmode-lib
+                         DependType = Library
+                         MustExist = Yes
+-                        DependPath = libXxf86vm.a
++                        DependPath = libXxf86vm.so
+                         DependGrepString = XF86VidModeQueryExtension
+                 FeatureDepend = xf86vidmode-devel
+                         DependType = Header
+@@ -146,7 +146,7 @@
+ 	PREFIX = $(DESTDIR)/usr/
+ 	CFLAGS = -Wall -O6 -funroll-loops -fomit-frame-pointer \
+ -ffast-math -finline-functions -fexpensive-optimizations -D__USE_BSD -DHAVE_SDL_MIXER -Wno-write-strings
+-	LIBS = -lm -lSDL -lSDL_mixer
++	LIBS = -lm -lSDL
+ 	LIB_DIR =
+         CC = gcc
+         CPP = g++
+@@ -186,7 +186,7 @@
+                 Description = X Window Systems
+                 MustExist = Yes
+ 		FeatureCFLAGS = -DUSE_XSHM -DHAVE_MWMUTIL_H
+-                FeatureLIBS = -lSM -lICE -lX11 -lXext -lXmu
++                FeatureLIBS = -lX11 -lXext
+ 		FeatureLIB_DIR = -L/usr/X11R6/lib/
+                 FeatureDepend = X11-lib
+                         DependType = Library
+@@ -223,7 +223,7 @@
+                 FeatureDepend = xf86vidmode-lib
+                         DependType = Library
+                         MustExist = Yes
+-                        DependPath = libXxf86vm.a
++                        DependPath = libXxf86vm.so
+                         DependGrepString = XF86VidModeQueryExtension
+                 FeatureDepend = xf86vidmode-devel
+                         DependType = Header

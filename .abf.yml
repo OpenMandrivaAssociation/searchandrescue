@@ -1,2 +1,4 @@
+removed_sources:
+  SearchAndRescue-1.2.0.tar.gz: 48e0a974de7d1522cfb6af94494f101a80ddaf45
 sources:
-  "SearchAndRescue-1.4.0.tar.gz:"	f401064a91b0f50811f1f0b75a81c123efcc4629
+  SearchAndRescue-1.4.0.tar.gz: f401064a91b0f50811f1f0b75a81c123efcc4629

@@ -37,8 +37,7 @@ aircraft and scenery.
 
 %prep
 %setup -q -n %{name}_%{version}
-%patch0 -p0 -b .link~
-%patch1 -p1 -b .compile~
+%apply_patches
 
 %build
 export CFLAGS="%{optflags}"
