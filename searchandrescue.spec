@@ -17,12 +17,12 @@ Requires:       %{name}-data
 Buildrequires:  jsw-devel
 Buildrequires:  yiff-devel
 Buildrequires:  SDL-devel
-BuildRequires:	libx11-devel
-BuildRequires:	libxext-devel
-BuildRequires:	libxpm-devel
+BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(xext)
+BuildRequires:	pkgconfig(xpm)
 BuildRequires:	mesagl-devel
 BuildRequires:	mesaglu-devel
-BuildRequires:	libxxf86vm-devel
+BuildRequires:	pkgconfig(xxf86vm)
 Buildrequires:  imagemagick
 
 %description
