@@ -5,7 +5,7 @@
 
 Name:           searchandrescue
 Version:        1.4.0
-Release:        3
+Release:        4
 Summary:        Helicopter simulator
 License:        GPL
 Group:          Games/Other
