@@ -4,13 +4,13 @@
 %define longtitle   Helicopter simulator
 
 Name:           searchandrescue
-Version:        1.4.0
-Release:        4
+Version:        1.5.0
+Release:        1
 Summary:        Helicopter simulator
 License:        GPL
 Group:          Games/Other
 Url:            http://searchandrescue.sourceforge.net/
-Source0:        http://switch.dl.sourceforge.net/project/searchandrescue/Program/SearchAndRescue-%version.tar.gz
+Source0:        http://downloads.sourceforge.net/project/searchandrescue/Program/SearchAndRescue-%version.tar.gz
 Patch0:		SearchAndRescue-1.1.0-link.patch
 Patch1:		searchandrescue-1.4.0-compile.patch
 Requires:       %{name}-data

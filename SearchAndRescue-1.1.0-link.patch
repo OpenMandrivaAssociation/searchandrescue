@@ -18,10 +18,10 @@
                          DependGrepString = XF86VidModeQueryExtension
                  FeatureDepend = xf86vidmode-devel
                          DependType = Header
-@@ -146,7 +146,7 @@
+@@ -147,7 +147,7 @@
  	PREFIX = $(DESTDIR)/usr/
- 	CFLAGS = -Wall -O6 -funroll-loops -fomit-frame-pointer \
- -ffast-math -finline-functions -fexpensive-optimizations -D__USE_BSD -DHAVE_SDL_MIXER -Wno-write-strings
+ 	CFLAGS = -Wall -O2 -funroll-loops -fomit-frame-pointer \
+ -ffast-math -finline-functions -D__USE_BSD -DHAVE_SDL_MIXER -Wno-write-strings
 -	LIBS = -lm -lSDL -lSDL_mixer
 +	LIBS = -lm -lSDL
  	LIB_DIR =
