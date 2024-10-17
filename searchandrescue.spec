@@ -9,7 +9,7 @@ Release:        1
 Summary:        Helicopter simulator
 License:        GPL
 Group:          Games/Other
-Url:            http://searchandrescue.sourceforge.net/
+Url:            https://searchandrescue.sourceforge.net/
 Source0:        http://downloads.sourceforge.net/project/searchandrescue/Program/SearchAndRescue-%version.tar.gz
 Patch0:		SearchAndRescue-1.1.0-link.patch
 Patch1:		searchandrescue-1.4.0-compile.patch
