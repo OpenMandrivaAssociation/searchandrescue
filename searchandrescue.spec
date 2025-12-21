@@ -14,6 +14,11 @@ Source0:        http://downloads.sourceforge.net/project/searchandrescue/Program
 Patch0:		SearchAndRescue-1.1.0-link.patch
 Patch1:		searchandrescue-1.4.0-compile.patch
 Requires:       %{name}-data
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  jsw-devel
 BuildRequires:  yiff-devel
 BuildRequires:  SDL-devel
